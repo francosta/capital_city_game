@@ -1,7 +1,8 @@
-require_relative "../WB API/wb_api.rb"
+require_relative "../capital_city_game/wb_api.rb"
 
 def run
   welcome
+  get_country
 end
 
 run

@@ -1,4 +1,4 @@
-require_relative "../WB API/data.rb"
+require_relative "../capital_city_game/data.rb"
 
 require 'pry'
 require 'json'
@@ -14,11 +14,10 @@ require 'rest-client'
 
 def welcome
   puts "Welcome to the capital city game! Let's play!"
-
-  binding.pry
-  ISO_hash
 end
 
 def get_country
+  puts "Please insert a country"
   country = gets.chomp
+  binding.pry
 end
