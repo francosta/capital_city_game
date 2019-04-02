@@ -7,3 +7,8 @@ def get_country
   user_country = gets.chomp
   user_country
 end
+
+def get_capital_city_guess(user_country)
+  puts "What's your guess for the capital of #{user_country}"
+  guess = gets.chomp
+end

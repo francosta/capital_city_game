@@ -27,4 +27,5 @@ end
 def get_API_info(code)
   response_string = RestClient.get("http://api.worldbank.org/v2/country/#{code}?format=json")
   country_info = JSON.parse(response_string)
+  country_info
 end
