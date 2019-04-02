@@ -12,12 +12,19 @@ require 'rest-client'
 # Ask the user if he/she knows the capital city of that country
 #
 
-def welcome
-  puts "Welcome to the capital city game! Let's play!"
+def get_ISO_code (user_country)
+
+  code = ""
+
+  ISO_array.each do |country|
+    if country[:name] == user_country
+      code = country[:code]
+    end
+  end
+  code
 end
 
-def get_country
-  puts "Please insert a country"
-  country = gets.chomp
-  binding.pry
+def get_API_info(code)
+  response_string = RestClient.get("http://api.worldbank.org/v2/country/#{code}?format=json")
+  country_info = JSON.parse(response_string)
 end
